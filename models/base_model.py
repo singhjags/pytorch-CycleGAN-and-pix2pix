@@ -99,6 +99,8 @@ class BaseModel():
                     print (save_path)
                     torch.save(net.module.cpu().state_dict(), save_path)
                     net.cuda(self.gpu_ids[0])
+                    os.getcwd()
+                    os.listdir(save_path)
                 else:
                     torch.save(net.cpu().state_dict(), save_path)
 
