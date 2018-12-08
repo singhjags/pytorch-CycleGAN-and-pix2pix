@@ -92,7 +92,9 @@ class Pix2PixModel(BaseModel):
         # Second, G(A) = B
         self.loss_G_L1 = self.criterionL1(self.fake_B, self.real_B) * self.opt.lambda_L1
 
-        self.loss_G = self.loss_G_GAN + self.loss_G_L1
+        # replaced the below line (remove g_gan loss as suggested by nikoss)
+        # self.loss_G = self.loss_G_GAN + self.loss_G_L1
+        self.loss_G = self.loss_G_L1
 
         self.loss_G.backward()
 
