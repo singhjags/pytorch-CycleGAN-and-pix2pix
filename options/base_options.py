@@ -27,7 +27,7 @@ class BaseOptions():
         parser.add_argument('--name', type=str, default='sydney_house_pix2pix', help='name of the experiment. It decides where to store samples and models')
         parser.add_argument('--dataset_mode', type=str, default='unaligned', help='chooses how datasets are loaded. [unaligned | aligned | single]')
         parser.add_argument('--model', type=str, default='pix2pix', help='chooses which model to use. cycle_gan, pix2pix, test')
-        parser.add_argument('--direction', type=str, default='BtoA', help='AtoB or BtoA')
+        parser.add_argument('--direction', type=str, default='AtoB', help='AtoB or BtoA')
         parser.add_argument('--epoch', type=str, default='latest', help='which epoch to load? set to latest to use latest cached model')
         parser.add_argument('--load_iter', type=int, default='0', help='which iteration to load? if load_iter > 0, the code will load models by iter_[load_iter]; otherwise, the code will load models by [epoch]')
         parser.add_argument('--num_threads', default=4, type=int, help='# threads for loading data')
